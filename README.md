@@ -13,8 +13,8 @@ URL: http://www.cultura.ba.gov.br/modules/conteudo/conteudo.php?conteudo=314
 ```
 .
 ├── data
-│   ├── coords.csv        # Arquivo CSV contendo as coordenadas das cidades da Bahia
-│   ├── custo.csv         # Arquivo CSV contendo o custo de deslocamento entre as cidades
+│   ├── coords.csv        # Arquivo CSV contendo as coordenadas das regiões da Bahia
+│   ├── custo.csv         # Arquivo CSV contendo o custo de deslocamento entre as regiões
 ├── src
 │   ├── algoritmos
 │   ├── visualizacao
@@ -25,13 +25,14 @@ URL: http://www.cultura.ba.gov.br/modules/conteudo/conteudo.php?conteudo=314
 
 ## Tecnologias Utilizadas
 
-- Python 3.8+
+- Python 
 - Bibliotecas:
   - pandas
   - numpy
   - matplotlib
   - seaborn
   - scikit-learn
+  - haversine
 
 ## Como Usar
 
@@ -44,11 +45,7 @@ URL: http://www.cultura.ba.gov.br/modules/conteudo/conteudo.php?conteudo=314
 
 ## Organização dos Dados
 
-Os dados das cidades da Bahia estão armazenados no arquivo `data/cidades_bahia.csv`, que contém as seguintes colunas:
-
-- `cidade`: Nome da cidade
-- `latitude`: Latitude da cidade
-- `longitude`: Longitude da cidade
+Os dados das regiões da Bahia estão armazenados nos arquivos do folder `data`.
 
 ## Algoritmos Implementados
 
