@@ -13,11 +13,12 @@ URL: http://www.cultura.ba.gov.br/modules/conteudo/conteudo.php?conteudo=314
 ```
 .
 ├── data
-│   ├── cidades_bahia.csv        # Arquivo CSV contendo as coordenadas das cidades da Bahia
+│   ├── coords.csv        # Arquivo CSV contendo as coordenadas das cidades da Bahia
+│   ├── custo.csv         # Arquivo CSV contendo o custo de deslocamento entre as cidades
 ├── src
 │   ├── algoritmos
 │   ├── visualizacao
-│   └── utils.py                    # Funções utilitárias
+│   └── distancia.py                 # Arquivo utilizado para gerar a matriz de custos
 ├── README.md
 └── requirements.txt
 ```
