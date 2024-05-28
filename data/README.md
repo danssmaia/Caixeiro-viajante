@@ -1,4 +1,4 @@
-#DADOS
+# DADOS
 
 Os dados das regiões da Bahia estão nessa pasta.
 
@@ -10,10 +10,10 @@ Os dados das regiões da Bahia estão nessa pasta.
 ```
 
 
-![Mapa dos pontos](mapaPB.PNG)
+![Mapa dos pontos](mapapb.PNG)
 
 
-#Eixo cartesiano com coordenadas dos pontos vermelhos
+## Eixo cartesiano com coordenadas dos pontos vermelhos
 
 `coords.csv`
 
@@ -24,7 +24,7 @@ Eixo Y (Longitude):
 O eixo Y representa a longitude, variando de 34.5°W a 44°W. Ele é dividido em 20 unidades iguais, cada uma representando 0.5° de longitude.
 
 
-#Custo entre as regiões
+## Custo entre as regiões
 
 `custo.csv`
 
