@@ -10,7 +10,7 @@ Os dados das regiões da Bahia estão nessa pasta.
 ```
 
 
-![Mapa dos pontos](mapapb.PNG)
+![Mapa dos pontos](mapapv.PNG)
 
 
 ## Eixo cartesiano com coordenadas dos pontos vermelhos
