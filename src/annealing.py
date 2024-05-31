@@ -2,6 +2,7 @@ import haversine as hs
 import csv
 import random
 import math
+import matplotlib.pyplot as plt
 
 # Nome do arquivo CSV
 arquivo = "C:/Users/cliente/Desktop/Cursos aleatorios/Caixeiro-viajante/data/coords.csv"
@@ -100,3 +101,25 @@ melhor_percurso, menor_distancia = simulated_annealing(cidades, cidade_partida, 
 # Imprimir o melhor percurso e a menor distância
 print("Melhor percurso:", melhor_percurso)
 print("Menor distância:", menor_distancia, "km")
+
+# Função para plotar o melhor percurso
+def plotar_percurso(cidades, percurso):
+    latitudes = [cidades[i]["latitude"] for i in percurso] + [cidades[percurso[0]]["latitude"]]
+    longitudes = [cidades[i]["longitude"] for i in percurso] + [cidades[percurso[0]]["longitude"]]
+    
+    plt.figure(figsize=(10, 6))
+    plt.plot(longitudes, latitudes, 'o-', markersize=5, color='blue')
+    plt.title("Melhor Percurso do Caixeiro Viajante")
+    plt.xlabel("Longitude")
+    plt.ylabel("Latitude")
+    
+    # Índices da sequência do percurso
+    for idx, (lat, lon) in enumerate(zip(latitudes, longitudes)):
+        plt.annotate(str(idx % len(percurso)), (lon, lat))
+    
+    plt.grid(True)
+    plt.show()
+    
+# Plotar o melhor percurso
+plotar_percurso(cidades, melhor_percurso)
+
