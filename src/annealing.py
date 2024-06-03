@@ -14,8 +14,8 @@ cidades = []
 with open(arquivo, newline='') as csvfile:
     reader = csv.reader(csvfile)
     for row in reader:
-        latitude = float(row[0])
-        longitude = float(row[1])
+        latitude = float(row[0])/10
+        longitude = float(row[1])/10
         cidades.append({"latitude": latitude, "longitude": longitude})
 
 # Função para calcular a distância total de um determinado percurso
