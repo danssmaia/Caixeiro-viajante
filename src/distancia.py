@@ -2,7 +2,8 @@ import haversine as hs
 import csv
 
 # Nome do arquivo CSV
-arquivo = "C:/Users/cliente/Desktop/Cursos aleatorios/Caixeiro-viajante/data/coords.csv"
+# Corrija o caminho PATH para o seu diretorio
+arquivo = "PATH/Caixeiro-viajante/data/coords.csv"
 
 # Coordenadas dos pontos vermelhos (armazenadas em uma lista de dicionários)
 pontos = []

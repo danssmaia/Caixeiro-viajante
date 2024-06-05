@@ -2,7 +2,9 @@
 
 ## Descrição
 
-Este projeto tem como objetivo resolver o problema do Caixeiro Viajante (Travelling Salesman Problem - TSP) especificamente para o estado da Bahia, Brasil. O TSP é um dos problemas mais clássicos e estudados em otimização combinatória, onde o desafio é encontrar o menor caminho que passa por todas as cidades exatamente uma vez e retorna à cidade de origem.
+Este projeto tem como objetivo resolver o problema do Caixeiro Viajante (Travelling Salesman Problem - TSP) 
+especificamente para o estado da Bahia, Brasil. O TSP é um dos problemas mais clássicos e estudados em otimização combinatória, 
+onde o desafio é encontrar o menor caminho que passa por todas as cidades exatamente uma vez e retorna à cidade de origem.
 
 A ideia é utilizar o mapa das regiões da bahia como referência.
 ![Mapa das Regiões da Bahia](mapa.PNG)
@@ -17,12 +19,12 @@ URL: http://www.cultura.ba.gov.br/modules/conteudo/conteudo.php?conteudo=314
 │   ├── coordsFront.csv   # Arquivo CSV contendo os indices, coordenadas e indices que fazem fronteira
 │   ├── custo.csv         # Arquivo CSV contendo o custo de deslocamento entre as regiões
 ├── src
-│   ├── algoritmos        # Arquivo responsável por calcular a melhor rota para o TSP, utilizando o algortimo Simulated Annealing
+│   ├── annealing.py        # Arquivo responsável por calcular a melhor rota para o TSP, utilizando o algortimo Simulated Annealing
 │   ├── distancia.py      # Arquivo utilizado para gerar a matriz de custos
 │   └── distanciaA.py     # Arquivo responsável por calcular a melhor rota entre 2 pontos, utilizando o algortimo A*
 │   └── distanciaSA.py    # Arquivo responsável por calcular a melhor rota entre 2 pontos, utilizando o algortimo Simulated Annealing
 │   └── grafo.py          # Arquivo responsável por plotar um grafo com os pontos e as suas fronteiras
-│   └── pntosIniciais.py  # Arquivo responsável por plotar a posição dos pontos iniciais
+│   └── pontosIniciais.py  # Arquivo responsável por plotar a posição dos pontos iniciais
 ├── README.md
 ```
 
@@ -44,6 +46,8 @@ URL: http://www.cultura.ba.gov.br/modules/conteudo/conteudo.php?conteudo=314
    git clone https://github.com/seu_usuario/caixeiro-viajante-bahia.git
    cd caixeiro-viajante-bahia
    ```
+   
+2. Corrija o diretorio 'PATH' nos arquivos na pasta src
 
 ## Organização dos Dados
 
