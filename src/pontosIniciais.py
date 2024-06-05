@@ -4,7 +4,8 @@ import csv
 import matplotlib.pyplot as plt
 
 # Nome do arquivo CSV
-arquivo = "C:/Users/cliente/Desktop/Cursos aleatorios/Caixeiro-viajante/data/coords.csv"
+# Corrija o caminho PATH para o seu diretorio
+arquivo = "PATH/Caixeiro-viajante/data/coords.csv"
 
 # Coordenadas das cidades (armazenadas em uma lista de dicionários)
 cidades = []
@@ -27,7 +28,7 @@ def plotar_pontos_iniciais(cidades):
     
     # Índices das cidades
     for idx, (lon, lat) in enumerate(zip(latitudes, longitudes)):
-        plt.annotate(str(idx), (lon, lat), textcoords="offset points", xytext=(0, 5), ha='center')
+        plt.annotate(str(idx+1), (lon, lat), textcoords="offset points", xytext=(0, 5), ha='center')
     
     plt.grid(True)
     plt.show()

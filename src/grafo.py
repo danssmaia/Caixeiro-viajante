@@ -4,7 +4,8 @@ import csv
 import matplotlib.pyplot as plt
 
 # Nome do arquivo CSV
-arquivo = "C:/Users/cliente/Desktop/Cursos aleatorios/Caixeiro-viajante/data/coordsFront.csv"
+# Corrija o caminho PATH para o seu diretorio
+arquivo = "PATH/Caixeiro-viajante/data/coordsFront.csv"
 
 # Coordenadas das cidades (armazenadas em uma lista de dicionários)
 cidades = []
@@ -32,7 +33,7 @@ def plotar_pontos_e_conexoes(cidades, grafo):
     # Plotar os pontos
     for idx, cidade in enumerate(cidades):
         plt.scatter(cidade["latitude"], cidade["longitude"], color='red', marker='o')
-        plt.annotate(str(idx), (cidade["latitude"], cidade["longitude"]), textcoords="offset points", xytext=(0, 5), ha='center')
+        plt.annotate(str(idx+1), (cidade["latitude"], cidade["longitude"]), textcoords="offset points", xytext=(0, 5), ha='center')
     
     # Plotar as conexões
     for cidade, vizinhos in grafo.items():
