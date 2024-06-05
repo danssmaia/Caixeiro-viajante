@@ -6,7 +6,8 @@ import math
 import matplotlib.pyplot as plt
 
 # Nome do arquivo CSV
-arquivo = "C:/Users/cliente/Desktop/Cursos aleatorios/Caixeiro-viajante/data/coordsFront.csv"
+# Corrija o caminho PATH para o seu diretorio
+arquivo = "PATH/Caixeiro-viajante/data/coordsFront.csv"
 
 cidades = []
 grafo = {}
@@ -87,7 +88,7 @@ def plotar_rota(cidades, rota):
     plt.title("Rota entre as Cidades")
     
     for idx, (lat, lon) in enumerate(zip(latitudes, longitudes)):
-        plt.annotate(str(rota[idx]), (lat, lon), textcoords="offset points", xytext=(0, 5), ha='center')
+        plt.annotate(str(rota[idx]+1), (lat, lon), textcoords="offset points", xytext=(0, 5), ha='center')
     
     plt.grid(True)
     plt.show()
@@ -95,10 +96,10 @@ def plotar_rota(cidades, rota):
 # Solicitar ao usuário que escolha as cidades de origem e destino
 print("Escolha as cidades de origem e destino pelo índice:")
 for idx, cidade in enumerate(cidades):
-    print(f"{idx}: ({cidade['latitude']}, {cidade['longitude']})")
+    print(f"{idx+1}: ({cidade['latitude']}, {cidade['longitude']})")
 
 inicio = int(input("Digite o índice da cidade de origem: "))
 objetivo = int(input("Digite o índice da cidade de destino: "))
 
-rota = a_star(cidades, grafo, inicio, objetivo)
+rota = a_star(cidades, grafo, inicio-1, objetivo-1)
 plotar_rota(cidades, rota)
