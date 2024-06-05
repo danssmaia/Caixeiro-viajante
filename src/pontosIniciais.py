@@ -29,8 +29,6 @@ def plotar_pontos_iniciais(cidades):
     for idx, (lon, lat) in enumerate(zip(latitudes, longitudes)):
         plt.annotate(str(idx), (lon, lat), textcoords="offset points", xytext=(0, 5), ha='center')
     
-    # Inverter o eixo Y para que o ponto (0,0) esteja no canto superior esquerdo
-    
     plt.grid(True)
     plt.show()
 
